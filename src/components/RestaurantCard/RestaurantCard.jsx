@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Favorite } from '@mui/icons-material';
 import {
   Button,
@@ -78,7 +79,7 @@ const RestaurantCard = observer(({ restaurant }) => {
               {location.addressExtended}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              {`${hours?.openNow ? 'Open' : 'Closed'}·${hours?.regular[0]?.open}`}
+              {`${hours?.openNow ? 'Open' : 'Closed'}·now`}
             </Typography>
             <Typography variant="body2" color="text.secondary" gutterBottom>
               {categoryText}
@@ -127,4 +128,4 @@ const RestaurantCard = observer(({ restaurant }) => {
   );
 });
 
-export default RestaurantCard;
+export default memo(RestaurantCard);

@@ -11,21 +11,22 @@ const DropHoursTable = ({ hours }) => {
     <div className="table-container">
       <TypographyWithIcon
         startIcon={<AccessTime />}
-        text={`${hours.openNow ? 'Open' : 'Close'}${showTable ? '' : ' now'}`}
+        text={`${hours.openNow ? 'Open' : 'Closed'}${showTable ? '' : ' now'}`}
         endIcon={showTable ? <ExpandLess /> : <ExpandMore />}
         onClick={() => setShowTable((prev) => !prev)}
+        data-testid="hours-value"
         sx={{ cursor: 'pointer' }}
       />
       {showTable && (
         <Table>
           <TableBody>
             {weekdays.map((weekday, index) => (
-              <TableRow>
+              <TableRow key={weekday}>
                 <TableCell>{weekday}</TableCell>
                 <TableCell>
                   <ul ul style={{ listStyle: 'none' }}>
                     {hours.regular?.[index + 1].map(({ open, close }) => (
-                      <li>{`${open}-${close}`}</li>
+                      <li key={`${open}-${close}`}>{`${open}-${close}`}</li>
                     ))}
                   </ul>
                 </TableCell>

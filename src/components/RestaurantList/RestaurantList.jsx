@@ -1,20 +1,11 @@
 import React from 'react';
-import { observer } from 'mobx-react';
 import { Typography } from '@mui/material';
-import { useStore } from '@/stores/useStore';
 import RestaurantCard from '../RestaurantCard/RestaurantCard';
 import './RestaurentList.css';
 
-const RestaurantList = observer(() => {
-  const restaurantStore = useStore();
-  const { restaurants, errorMessage } = restaurantStore;
-
-  if (errorMessage) {
-    return <div>{errorMessage}</div>;
-  }
-
+const RestaurantList = ({ restaurants }) => {
   return (
-    <div className="restaurant-list-container">
+    <div className="restaurant-list-container" data-testid="restaurant-list">
       {!!restaurants.length && (
         <>
           <Typography>Restaurant Listings</Typography>
@@ -26,6 +17,6 @@ const RestaurantList = observer(() => {
       )}
     </div>
   );
-});
+};
 
 export default RestaurantList;

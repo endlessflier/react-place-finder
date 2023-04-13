@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
 import { Button, Rating, Typography, Stack, Divider } from '@mui/material';
 import {
   ArrowBack as ArrowBackIcon,
@@ -11,7 +11,6 @@ import {
   RestaurantMenu,
 } from '@mui/icons-material';
 import { observer } from 'mobx-react-lite';
-import PropTypes from 'prop-types';
 import { useStore } from '@/stores/useStore';
 import Modal from '@/components/Modal';
 import DropHoursTable from '@/components/DropHoursTable/DropHoursTable';
@@ -56,7 +55,7 @@ const RestaurantDetailsPage = observer(() => {
               className="backButton"
               startIcon={<ArrowBackIcon />}
               onClick={handleClose}
-              id={`backButton`}
+              data-testid="back-button"
             >
               Back
             </Button>
@@ -138,7 +137,7 @@ const RestaurantDetailsPage = observer(() => {
           <Divider />
           {!!tips.length &&
             tips.map((tip) => (
-              <>
+              <Fragment key={tip.text}>
                 <Typography variant="body2" color="text.secondary">
                   {tip.text}
                 </Typography>
@@ -151,7 +150,7 @@ const RestaurantDetailsPage = observer(() => {
                   })}
                 </Typography>
                 <Divider />
-              </>
+              </Fragment>
             ))}
         </div>
         <ul className={'photoList'}>
@@ -165,21 +164,5 @@ const RestaurantDetailsPage = observer(() => {
     </>
   );
 });
-
-RestaurantDetailsPage.propTypes = {
-  center: PropTypes.shape({
-    lat: PropTypes.number.isRequired,
-    lng: PropTypes.number.isRequired,
-  }),
-  zoom: PropTypes.number.isRequired,
-};
-
-RestaurantDetailsPage.defaultProps = {
-  center: {
-    lat: 35.6475, // Default location in Tokyo
-    lng: 139.7369,
-  },
-  zoom: 10,
-};
 
 export default RestaurantDetailsPage;

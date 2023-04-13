@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material';
 import App from '@/App';
-import { useStore, StoreContext } from '@/stores/useStore';
+import { RestaurantStore } from '../stores/restaurantStore';
 
 describe('App', () => {
   it('renders the app header', () => {
@@ -31,13 +31,14 @@ describe('App', () => {
   });
 
   it('renders the LoadingIndicator component when isLoading is true', () => {
-    const stores = useStore();
-    stores.setIsLoading(true);
+    const store = new RestaurantStore();
+    const StoreContext = createContext(store);
+    store.isLoading = true;
 
     render(
       <MemoryRouter initialEntries={['/']}>
         <ThemeProvider>
-          <StoreContext.Provider value={stores}>
+          <StoreContext.Provider value={store}>
             <App />
           </StoreContext.Provider>
         </ThemeProvider>

@@ -18,6 +18,7 @@ const TopNavigation = observer(() => {
   return (
     <form
       onSubmit={handleSearchSubmit}
+      data-testid="top-navigation"
       style={{
         display: 'flex',
         gap: '10px',

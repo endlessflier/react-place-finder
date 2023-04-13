@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   const { isLoading } = useStore();
-  console.log(isLoading);
+
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
