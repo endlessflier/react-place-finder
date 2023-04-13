@@ -5,6 +5,7 @@ Restaurant Finder is a web application that helps customers pick a restaurant cl
 ## Technical Architecture
 
 The Restaurant Finder application is built using React, Routing, Jest, MobX, and the react-google-maps package. The application uses a Flux architecture, with a restaurantStore that holds the state for the application, and actions that update that state. The StoreProvider component from MobX is used to provide the store to the components that need it.
+Check the details [Here](https://github.com/endlessflier/react-place-finder/blob/feat/update-documents/document.md)
 
 ## Technical Choices
 
