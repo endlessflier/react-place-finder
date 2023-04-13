@@ -42,25 +42,25 @@ root/
 |-- .gitignore
 
 In this directory structure, we have the following:
-o	src/ directory contains all the source code for the application.
-•	components/ directory contains all the React components in the project.
-•	pages/: This directory contains the top-level pages of the application.
+- src/ directory contains all the source code for the application.
+- components/ directory contains all the React components in the project.
+- pages/: This directory contains the top-level pages of the application.
 The HomePage component is the landing page, where users can search for restaurants or pick a random one.
 The RestaurantPage component displays a list of restaurants based on the user's search criteria.
 The RestaurantDetailsPage component shows the details of a particular restaurant.
-•	stores/ directory contains the restaurantStore.js file which stores the data for restaurants.
-•	services/ directory contains the googleMapsService.js file which interacts with the Google Maps API to get data for restaurants.
+- stores/ directory contains the restaurantStore.js file which stores the data for restaurants.
+- services/ directory contains the googleMapsService.js file which interacts with the Google Maps API to get data for restaurants.
 Used the Map component from google-maps-react to display the map and set the initial center to the company location.
 Used the Marker component from google-maps-react to place a marker at the company location.
 Used the Places component from google-maps-react to search for nearby restaurants and display them as markers on the map.
-•	App.jsx is the main component that renders all other components.
-•	index.jsx is the entry point for the application.
-o	tests/ directory contains all the test files for the application.
-•	components/ directory contains test files for all the components.
-•	stores/ directory contains the test file for the restaurantStore.js.
-o	.gitignore file specifies files and directories that Git should ignore.
-o	package.json file contains information about the project and the packages used.
-o	README.md file contains information about the project, how to run it, and how to contribute.
+- App.jsx is the main component that renders all other components.
+- index.jsx is the entry point for the application.
+- tests/ directory contains all the test files for the application.
+- components/ directory contains test files for all the components.
+- stores/ directory contains the test file for the restaurantStore.js.
+- .gitignore file specifies files and directories that Git should ignore.
+- package.json file contains information about the project and the packages used.
+- README.md file contains information about the project, how to run it, and how to contribute.
 With this directory structure, I can easily manage my source code and tests separately.
 
 
