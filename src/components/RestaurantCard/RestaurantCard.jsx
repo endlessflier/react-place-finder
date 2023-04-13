@@ -81,7 +81,7 @@ const RestaurantCard = observer(({ restaurant }) => {
             <Typography variant="body2" color="text.secondary">
               {`${hours?.openNow ? 'Open' : 'Closed'}·now`}
             </Typography>
-            <Typography variant="body2" color="text.secondary" gutterBottom>
+            <Typography variant="body2" color="text.secondary">
               {categoryText}
             </Typography>
           </Stack>
@@ -94,7 +94,7 @@ const RestaurantCard = observer(({ restaurant }) => {
             />
           )}
         </Stack>
-        <Typography gutterTop variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary">
           {`${restaurant.features?.deliveryService ? '' : 'No'} Delivery`}
         </Typography>
       </CardContent>

@@ -1,7 +1,10 @@
+// Importing the getFavoriteRestaurant function from the utils module
 import { getFavoriteRestaurant } from '@/utils';
 
-const CATEGORY_ICONSIZE = 64; //  32, 44, 64, 88, or 120
+// Declaring a constant variable for the size of category icons
+const CATEGORY_ICONSIZE = 64; // Can be set to 32, 44, 64, 88, or 120
 
+// Defining a function that takes an array of photo objects and returns an array of parsed photo objects
 export function parsePhotos(photos) {
   return (
     photos?.map(({ id, classifications, created_at, prefix, suffix, width, height }) => ({
@@ -16,9 +19,12 @@ export function parsePhotos(photos) {
   );
 }
 
+// Defining a function to parse the opening hours of a restaurant
 function parseHours(hours) {
+  // Initializing an empty object for regular opening hours
   let regular = {};
 
+  // Declaring a helper function to convert time strings to localized time strings
   const getTimeString = (timeString) => {
     const hours = parseInt(timeString.slice(0, 2));
     const minutes = parseInt(timeString.slice(2, 4));
@@ -32,6 +38,7 @@ function parseHours(hours) {
     });
   };
 
+  // Parsing and organizing the opening hours into an object
   hours?.regular?.forEach((item) => {
     if (!regular[item.day]) regular[item.day] = [];
 
@@ -41,6 +48,7 @@ function parseHours(hours) {
     });
   });
 
+  // Returning an object containing the display text, local holiday status, opening now status, and regular opening hours
   return {
     display: hours?.display,
     isLocalHoliday: hours?.is_local_holiday,
@@ -49,6 +57,7 @@ function parseHours(hours) {
   };
 }
 
+// Defining a function to parse the location of a restaurant from a geocode object
 export function parseGeocodeLocation(obj) {
   const geoCode = obj.geocodes?.main ?? obj.geocodes?.roof ?? {};
   return {
@@ -58,7 +67,10 @@ export function parseGeocodeLocation(obj) {
     address: obj.location?.formatted_address,
   };
 }
+
+// Defining a function to parse a restaurant object
 export function parseRestaurant(obj) {
+  // Parsing categories and formatting them
   const categories =
     obj.categories?.map(({ id, name, icon }) => ({
       id,
@@ -67,6 +79,7 @@ export function parseRestaurant(obj) {
     })) ?? [];
   const categoryText = categories.map(({ name }) => name).join(' · ');
 
+  // Returning a parsed restaurant object with various properties
   return {
     id: obj.fsq_id,
     name: obj.name,
@@ -96,6 +109,7 @@ export function parseRestaurant(obj) {
   };
 }
 
+// Defining a function to parse an autocomplete object
 export function parseAutoComplete(obj) {
   const placeObj = obj.place;
   const textObj = obj.text;

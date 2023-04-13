@@ -20,7 +20,9 @@ import './RestaurantDetailsPage.css';
 const PAGE_NAME = 'RestuarantDetailModal';
 
 const RestaurantDetailsPage = observer(() => {
+  //A useStore() function is called to access the MobX Store object.
   const restaurantStore = useStore();
+  // Several constants are then defined by destructuring the properties of the selected restaurant from the store.
   const [favorite, setFavorite] = useState(restaurantStore.getSelectedRestaurant?.favorite);
   const {
     id,
@@ -38,7 +40,8 @@ const RestaurantDetailsPage = observer(() => {
     distance,
   } = restaurantStore.getSelectedRestaurant;
   const handleClose = () => restaurantStore.selectRestaurant(null);
-
+  // Finally, the component returns a Modal component that is used to display the restaurant's details.
+  // Within the Modal, there are multiple Typography and Button components that display different pieces of information about the restaurant such as its name, rating, delivery status, hours of operation, website, pricing, address etc.
   return (
     <>
       <Modal
@@ -156,7 +159,7 @@ const RestaurantDetailsPage = observer(() => {
         <ul className={'photoList'}>
           {restaurantStore.restaurantPhotos.map((photo) => (
             <li key={photo.id} className="photoItem">
-              <img key={photo.id} src={`${photo.prefix}original${photo.suffix}`} alt="" />
+              <img src={`${photo.prefix}original${photo.suffix}`} alt="" />
             </li>
           ))}
         </ul>

@@ -1,43 +1,37 @@
+# Project Structure
+
 root/
 |-- src/
 |   |-- components/
+|   |   |-- DropHoursTable.jsx
+|   |   |-- LoadingIndicator.js
+|   |   |-- MapComponent.jsx
+|   |   |-- Modal.js
 |   |   |-- RestaurantList.jsx
 |   |   |-- RestaurantCard.jsx
-|   |   |-- RestaurantDetails.jsx
-|   |   |-- MapView.jsx
-|   |   |-- SearchBar.jsx
-|   |   |-- RandomButton.jsx
+|   |   |-- RoundedButton.js
+|   |   |-- SearchField.js
+|   |   |-- TopNavigation.jsx
+|   |   |-- TypegraphyWithIcon.js
 |   |
 |   |-- pages/
 |   |   |-- HomePage.jsx
-|   |   |-- RestaurantPage.jsx
 |   |   |-- RestaurantDetailsPage.jsx
 |   |
 |   |-- stores/
 |   |   |-- restaurantStore.js
+|   |   |-- useStore.js
 |   |
-|   |-- services/
-|   |   |-- googleMapsService.js
+|   |-- tests/
+|   |   |-- DropHoursTable.test.jsx
+|   |   |-- RestaurantCard.test.jsx
+|   |   |-- RestaurantList.test.jsx
+|   |   |-- HomePage.test.jsx
+|   |   |-- RestaurantDetailsPage.test.jsx
+|   |   |-- restaurantStore.test.js
 |   |
 |   |-- App.jsx
 |   |-- index.jsx
-|
-├── tests/
-|   ├── components/
-|   |   ├── RestaurantList.test.jsx
-|   |   ├── RestaurantCard.test.jsx
-|   |   ├── RestaurantDetails.test.jsx
-|   |   ├── MapView.test.jsx
-|   |   ├── SearchBar.test.jsx
-|   |   └── RandomButton.test.jsx
-|   |
-|   ├── stores/
-|   |   └── restaurantStore.test.jsx
-|   |
-|   ├── services/
-|   |   └── googleMapsService.test.jsx
-|   |
-|   └── ...
 |
 |-- public/
 |   |-- index.html
@@ -64,15 +58,14 @@ Used the Places component from google-maps-react to search for nearby restaurant
 o	tests/ directory contains all the test files for the application.
 •	components/ directory contains test files for all the components.
 •	stores/ directory contains the test file for the restaurantStore.js.
-•	services/ directory contains the test file for the googleMapsService.js.
 o	.gitignore file specifies files and directories that Git should ignore.
 o	package.json file contains information about the project and the packages used.
 o	README.md file contains information about the project, how to run it, and how to contribute.
-With this directory structure, you can easily manage your source code and tests separately.
+With this directory structure, I can easily manage my source code and tests separately.
 
 
 
-# Roppongi Restaurants Web App
+## Restaurants Finder App
 
 This is a web app service built with React, Routing, Jest and MobX that helps customers pick a restaurant close to their office in Roppongi. The app allows for random restaurant selection, keyword search for restaurants, display of a map view of the selected restaurant, and provides a page with restaurant details such as menu, pictures, and reviews. The application uses open APIs such as Foursquare Places API for getting actual data.
 
@@ -92,6 +85,7 @@ To install and run this project, follow these steps:
 2. Install dependencies: `yarn install`
 3. Create a `.env` file in the root directory with your API key:
    REACT_APP_GOOGLE_MAP_API_KEY='API_KEY'
+   REACT_APP_FOURSQUARE_API_KEY='API_KEY'
 4. Start the app: `yarn start`
 5. Open your browser and go to `http://localhost:3000`
 
