@@ -1,45 +1,45 @@
 # Project Structure
 
-root/
-|-- src/
-|   |-- components/
-|   |   |-- DropHoursTable.jsx
-|   |   |-- LoadingIndicator.js
-|   |   |-- MapComponent.jsx
-|   |   |-- Modal.js
-|   |   |-- RestaurantList.jsx
-|   |   |-- RestaurantCard.jsx
-|   |   |-- RoundedButton.js
-|   |   |-- SearchField.js
-|   |   |-- TopNavigation.jsx
-|   |   |-- TypegraphyWithIcon.js
-|   |
-|   |-- pages/
-|   |   |-- HomePage.jsx
-|   |   |-- RestaurantDetailsPage.jsx
-|   |
-|   |-- stores/
-|   |   |-- restaurantStore.js
-|   |   |-- useStore.js
-|   |
-|   |-- tests/
-|   |   |-- DropHoursTable.test.jsx
-|   |   |-- RestaurantCard.test.jsx
-|   |   |-- RestaurantList.test.jsx
-|   |   |-- HomePage.test.jsx
-|   |   |-- RestaurantDetailsPage.test.jsx
-|   |   |-- restaurantStore.test.js
-|   |
-|   |-- App.jsx
-|   |-- index.jsx
-|
-|-- public/
-|   |-- index.html
-|   |-- favicon.ico
-|
-|-- README.md
-|-- package.json
-|-- .gitignore
+- root/
+- |-- src/
+- |   |-- components/
+- |   |   |-- DropHoursTable.jsx
+- |   |   |-- LoadingIndicator.js
+- |   |   |-- MapComponent.jsx
+- |   |   |-- Modal.js
+- |   |   |-- RestaurantList.jsx
+- |   |   |-- RestaurantCard.jsx
+- |   |   |-- RoundedButton.js
+- |   |   |-- SearchField.js
+- |   |   |-- TopNavigation.jsx
+- |   |   |-- TypegraphyWithIcon.js
+- |   |
+- |   |-- pages/
+- |   |   |-- HomePage.jsx
+- |   |   |-- RestaurantDetailsPage.jsx
+- |   |
+- |   |-- stores/
+- |   |   |-- restaurantStore.js
+- |   |   |-- useStore.js
+- |   |
+- |   |-- tests/
+- |   |   |-- DropHoursTable.test.jsx
+- |   |   |-- RestaurantCard.test.jsx
+- |   |   |-- RestaurantList.test.jsx
+- |   |   |-- HomePage.test.jsx
+- |   |   |-- RestaurantDetailsPage.test.jsx
+- |   |   |-- restaurantStore.test.js
+- |   |
+- |   |-- App.jsx
+- |   |-- index.jsx
+- |
+- |-- public/
+- |   |-- index.html
+- |   |-- favicon.ico
+- |
+- |-- README.md
+- |-- package.json
+- |-- .gitignore
 
 In this directory structure, we have the following:
 - src/ directory contains all the source code for the application.
