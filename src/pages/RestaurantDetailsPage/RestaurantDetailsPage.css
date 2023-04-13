@@ -1,0 +1,79 @@
+.restaurantContainer {
+  height: 100%;
+  width: 100%;
+}
+.restaurantContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.photoList {
+  display: flex;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+  padding: 8px;
+  width: auto;
+  flex: 1;
+}
+
+.detailList {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  width: 100%;
+  gap: 4px;
+}
+
+.photoItem {
+  cursor: pointer;
+  border-width: 0px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px inset;
+  width: auto;
+  height: calc(75vw);
+  overflow: hidden;
+  list-style-type: none;
+  flex: 1 0 90%;
+  margin-bottom: 4px;
+}
+
+.photoItem img {
+  /* position: absolute; */
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (min-width: 768px) {
+  .restaurantContent {
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+  }
+  .photoItem {
+    height: calc(((100vw - 400px) * 3) / 4);
+  }
+  .detailList {
+    width: 360px;
+  }
+}
+
+@media (min-width: 900px) {
+  .photoItem {
+    height: calc((((100vw - 400px) - 4px) * 3) / 8);
+    max-width: calc(50% - 2px);
+    flex: 1 0 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .restaurantContainer {
+    width: 80%;
+  }
+  .photoItem {
+    height: calc(((((100vw - 400px) - 144px) - 4px) * 3) / 8);
+  }
+}
