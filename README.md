@@ -33,7 +33,11 @@ The Restaurant Finder application has been thoroughly tested using Jest. Tests h
 
 ## Conclusion
 
-The Restaurant Finder application is a simple and intuitive way for customers to find a restaurant close to their office in Roppongi. It uses the react-google-maps package to display the map view and get location data, and MobX for state management. The application is well-documented and tested, and could be easily extended with additional features.
+In conclusion, the Restaurant Finder is a web application built with React, Routing, Jest, and MobX, designed to help users easily find a restaurant close to their office in Roppongi. It uses open APIs such as Foursquare Places API for getting actual data and includes features such as random restaurant selection, keyword search for restaurants, map view of the selected restaurant, and a page with restaurant details such as menu, pictures, and reviews.
+
+The project structure is well-organized with all source code included in the "src" directory, making it easy to manage and test the application separately. The project also went through thorough testing using Jest, ensuring the application functions correctly and the state is managed properly.
+
+I am proud of the application and look forward to its success in helping customers find the perfect lunch spot in Roppongi.
 Check the live demo [HERE](https://react-restaurant-finder.vercel.app/).
 
 ## Link to Other Code
