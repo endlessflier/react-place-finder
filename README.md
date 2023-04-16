@@ -1,6 +1,6 @@
 # Restaurant Finder
 
-Restaurant Finder is a web application that helps customers pick a restaurant close to their office in Roppongi. The app allows for random restaurant selection, keyword search for restaurants, display of a map view of the selected restaurant, and provides a page with restaurant details such as menu, pictures, and reviews. The application uses the react-google-maps package to display the map view and get location data, and allows users to search for restaurants within a certain radius.
+Restaurant Finder is a web app service built with React, Routing, Jest and MobX that helps customers pick a restaurant close to their office in Roppongi. The app allows for random restaurant selection, keyword search for restaurants, display of a map view of the selected restaurant, and provides a page with restaurant details such as menu, pictures, and reviews. The application uses open APIs such as Foursquare Places API for getting actual data. The application uses the react-google-maps package to display the map view and get location data.
 
 ## Technical Architecture
 

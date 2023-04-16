@@ -41,18 +41,20 @@
 - |-- package.json
 - |-- .gitignore
 
-In this directory structure, we have the following:
+In this directory structure, I have the following:
 - src/ directory contains all the source code for the application.
-- components/ directory contains all the React components in the project.
+- The project contains all React components in the `components/` directory.
+A `MapComponent.jsx` file has been created to interact with the Google Maps API and get data for restaurants.
+The `Map` component from `google-maps-react` has been used to display the map.
+The initial center of the map has been set to the company location.
+The `Marker` component from `google-maps-react` has been used to place a marker at the company location.
+The `Places` component from `google-maps-react` has been used to search for nearby restaurants and display them as markers on the map.
 - pages/: This directory contains the top-level pages of the application.
 The HomePage component is the landing page, where users can search for restaurants or pick a random one.
-The RestaurantPage component displays a list of restaurants based on the user's search criteria.
+The RestaurantList component displays a list of restaurants based on the user's search criteria.
 The RestaurantDetailsPage component shows the details of a particular restaurant.
 - stores/ directory contains the restaurantStore.js file which stores the data for restaurants.
-- services/ directory contains the googleMapsService.js file which interacts with the Google Maps API to get data for restaurants.
-Used the Map component from google-maps-react to display the map and set the initial center to the company location.
-Used the Marker component from google-maps-react to place a marker at the company location.
-Used the Places component from google-maps-react to search for nearby restaurants and display them as markers on the map.
+- api/ directory contains the foursquare.js and dataParser.js to get/parse Foursquare's location-based data. 
 - App.jsx is the main component that renders all other components.
 - index.jsx is the entry point for the application.
 - tests/ directory contains all the test files for the application.
